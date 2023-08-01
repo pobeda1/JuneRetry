@@ -1,16 +1,11 @@
-# text_field_glasnie
+# Onegin 2
 
-A new Flutter project.
+Alexander Pushkin created only one Eugene Onegin. This app aimed to help to create another one.
 
-## Getting Started
+Note taker with specific poetic features.
 
-This project is a starting point for a Flutter application.
+## App specific features
 
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+1. Count number of vowels in string.
+2. To stress vowels in way of syllabo-tonic system.
+3. 

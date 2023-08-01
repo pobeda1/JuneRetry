@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
-import 'package:text_field_glasnie/src/models/poem_model.dart';
-import 'package:text_field_glasnie/src/repositories/poetry_repository.dart';
 import 'package:text_field_glasnie/src/ui/pages/home_page.dart';
 import 'package:text_field_glasnie/src/ui/widgets/inherited_widget.dart';
 

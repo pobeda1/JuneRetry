@@ -3,7 +3,6 @@ import 'package:flutter/widgets.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:text_field_glasnie/src/models/poem_model.dart';
 import 'dart:convert';
-import '../../repositories/poetry_repository.dart';
 
 class MyInheritedWidget extends InheritedWidget {
   MyInheritedWidget({super.key, required super.child, required this.local});
@@ -19,8 +18,6 @@ class MyInheritedWidget extends InheritedWidget {
   //   local.setStringList('items', <String>[b]);
   // }
 
-  // скорее всего при моём исполнении не обязатель класть stringList, наверно можно обойтись String
-  // эту функцию с a.map написал chatgpt из верхней закомментированной. если мы ложим лист, то он хочет пройтись по каждому объекту листа.
 
   Future<void> setLocal(List<PoemModel> item) async {
     List<String> jsonStringList =
@@ -34,6 +31,7 @@ class MyInheritedWidget extends InheritedWidget {
    вопрос: чем вызов jsonEncode здесь отличается от вызова jsonEncode в setLocal? 
    почему здесь давало ошибку, а там её пропускало. из-за асинхронности?
   */
+  
   String exampleToJson(PoemModel pm) {
     print(jsonEncode(pm.toJson()));
     return jsonEncode(pm.toJson());
@@ -75,9 +73,10 @@ class MyInheritedWidget extends InheritedWidget {
 
   final ValueNotifier<List<PoemModel>> notifier = ValueNotifier([]);
 
-  void notifierEncode(List<PoemModel> a) {
-    var b = a[a.length - 1].toJson();
-  }
+  // void notifierEncode(List<PoemModel> a) {
+  //   var b = a[a.length - 1].toJson();
+  //   b;
+  // }
   // final PoetryRepository repository;
   // List<PoemModel> get poetries => repository.value;
 
