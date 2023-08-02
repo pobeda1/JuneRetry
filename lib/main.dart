@@ -4,11 +4,11 @@ import 'package:text_field_glasnie/src/ui/pages/home_page.dart';
 import 'package:text_field_glasnie/src/ui/widgets/inherited_widget.dart';
 
 void main() {
-  runApp(MyApp());
+  runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
-  MyApp({super.key});
+  const MyApp({super.key});
 
   // This widget is the root of your application.
   @override
@@ -31,7 +31,7 @@ class MyApp extends StatelessWidget {
               theme: ThemeData(
                 primarySwatch: Colors.blue,
               ),
-              home: HomePage(),
+              home: const HomePage(),
             ),
           );
         });

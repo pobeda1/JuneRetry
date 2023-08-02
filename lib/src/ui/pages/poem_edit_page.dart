@@ -43,6 +43,7 @@ class _PoemEditPageState extends State<PoemEditPage> {
         controller: controller,
         inputFormatters: [ChangeVowels()],
         decoration: const InputDecoration(border: InputBorder.none),
+        maxLines: null,
       ),
     );
   }

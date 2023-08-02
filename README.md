@@ -9,4 +9,4 @@ Note taker with specific poetic features.
 1. Count number of vowels in string. (in progress)
 2. To stress vowels in way of syllabo-tonic system.
 3. In-app Rhyme suggestions (in plans)
-4. In-app GPT analyse and co-writing poems (in plans)
+4. In-app GPT-bot which helps analyse and co-writing poems (in plans)

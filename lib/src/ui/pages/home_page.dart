@@ -6,7 +6,7 @@ import 'package:text_field_glasnie/src/ui/widgets/poem_view.dart';
 import '../../models/poem_model.dart';
 
 class HomePage extends StatefulWidget {
-  HomePage({super.key});
+  const HomePage({super.key});
 
   @override
   State<HomePage> createState() => _HomePageState();

@@ -20,7 +20,7 @@ class _PoemViewState extends State<PoemView> {
           borderRadius: BorderRadius.all(Radius.circular(8)),
         ),
         child: Padding(
-          padding: EdgeInsets.fromLTRB(12, 10, 10, 1),
+          padding: const EdgeInsets.fromLTRB(12, 10, 10, 1),
           child: Text(
             widget.poem.text,
             style: Theme.of(context).textTheme.headlineSmall,
