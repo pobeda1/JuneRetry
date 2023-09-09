@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 import 'package:text_field_glasnie/src/models/poem_model.dart';
 import 'package:text_field_glasnie/src/ui/widgets/inherited_widget.dart';
@@ -29,12 +28,26 @@ class _PoemEditPageState extends State<PoemEditPage> {
           IconButton(
               onPressed: () {
                 final repository = MyInheritedWidget.of(context);
+                PoemModel newPoem = PoemModel(controller.text);
                 // repository.addPoemModel(controller.text);
                 // repository.exampleToJson(PoemModel(controller.text));
-                repository.setLocal([PoemModel(controller.text)]);
-                print(repository.local.getStringList('items'));
+                print(newPoem);
+                repository.setItemToLocalStorage([newPoem]);
+                void printing() {
+                  if (repository.local.containsKey('items')) {
+                    print(repository.local.getStringList('items'));
+                    print('contains');
+                    
+                  } else {
+                    print('The key "items" does not exist');
+                  }
+                  ;
+                }
+
+                printing();
                 final lastPm = repository.poemModelDecode()!;
                 repository.addPoemModelFromShared(lastPm);
+                print(repository.notifier.value);
               },
               icon: const Icon(Icons.save))
         ],

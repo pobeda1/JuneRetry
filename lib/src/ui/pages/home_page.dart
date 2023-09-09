@@ -31,24 +31,31 @@ class _HomePageState extends State<HomePage> {
   }
 
   Widget _getGrid(BuildContext context, List<PoemModel> value, Widget? child) {
-    return GridView.builder(
-      gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-        crossAxisCount: 2,
+    return Padding(
+      padding: const EdgeInsets.all(8.0),
+      child: GridView.builder(
+        
+        gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+          crossAxisCount: 2,
+          mainAxisSpacing: 10,
+          crossAxisSpacing: 10
+          
+        ),
+        itemCount: value.length,
+        itemBuilder: (context, index) {
+          var item = value[index];
+    
+          return InkWell(
+            onTap: () => Navigator.of(context).push(MaterialPageRoute(
+                builder: ((context) => PoemEditPage(
+                      poem: item,
+                    )))),
+            child: PoemView(
+              poem: item,
+            ),
+          );
+        },
       ),
-      itemCount: value.length,
-      itemBuilder: (context, index) {
-        var item = value[index];
-
-        return InkWell(
-          onTap: () => Navigator.of(context).push(MaterialPageRoute(
-              builder: ((context) => PoemEditPage(
-                    poem: item,
-                  )))),
-          child: PoemView(
-            poem: item,
-          ),
-        );
-      },
     );
   }
 }

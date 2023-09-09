@@ -14,13 +14,11 @@ class MyInheritedWidget extends InheritedWidget {
 
   final SharedPreferences local;
 
-
-  Future<void> setLocal(List<PoemModel> item) async {
+  Future<void> setItemToLocalStorage(List<PoemModel> item) async {
     List<String> jsonStringList =
         item.map((poem) => jsonEncode(poem.toJson())).toList();
     local.setStringList('items', jsonStringList);
   }
-
 
   PoemModel? poemModelDecode() {
     List<String>? getList = local.getStringList('items');
